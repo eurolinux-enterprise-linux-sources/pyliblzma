@@ -7,14 +7,13 @@
 Summary:    Python bindings for lzma
 Name:       pyliblzma
 Version:    0.5.3
-Release:    11%{?dist}
+Release:    8%{?dist}
 License:    LGPLv3+
 URL:        https://launchpad.net/pyliblzma
 Source0:    http://pypi.python.org/packages/source/p/pyliblzma/%{name}-%{version}.tar.bz2
 Patch0:     no-script-liblzma.patch
 
 BuildRequires:    xz-devel python-setuptools python2-devel
-BuildRequires:  python-test
 BuildRoot:    %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -48,16 +47,6 @@ rm -rf %{buildroot}
 %{python_sitearch}/%{name}*.egg-info
 
 %changelog
-* Tue Jan 28 2014 Daniel Mach <dmach@redhat.com> - 0.5.3-11
-- Mass rebuild 2014-01-24
-
-* Fri Jan 24 2014 James Antill <james.antill@redhat.com> - 0.5.3-10
-- Add python-test Build Requires so %check works again.
-- Resolves: rhbz#1044625
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.5.3-9
-- Mass rebuild 2013-12-27
-
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.5.3-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
